@@ -1,0 +1,20 @@
+{
+  "name": "examen1",
+  "authors": [
+    "20LDiegoM <luisdiego.m20@gmail.com>"
+  ],
+  "description": "Examen de proyecto",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

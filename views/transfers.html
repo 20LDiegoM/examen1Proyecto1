@@ -1,0 +1,24 @@
+<header-main></header-main>
+<div class="container" ng-controller="transfersCtrl">
+  <h2>Agregar Transferencia</h2>
+  <form ng-submit="addTransfers()">
+    <div class="form-group">
+      <label for="movementDate">Date</label>
+      <input type="date" class="form-control" ng-model="newDate" placeholder="date of transfers">
+    </div>
+    <div class="form-group ">
+      <label for="transfersType">Tipo de transferencia</label>
+      <select class="form-control" ng-model="newType" ng-options="item for items in transfersType">
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="amount">Cantidad</label>
+      <input type="text" class="form-control" ng-model="newAmount" id="amount">
+    </div>
+    <div class="form-group">
+      <label for="transfersDescription">Descripci&oacute;n de la Transferencia</label>
+      <textarea class="form-control" rows="3" ng-model="newDescription" id="transfersDescription"></textarea>
+    </div>
+    <button type="text" class="btn btn-default">Agregar Transferencia</button>
+  </form>
+</div>

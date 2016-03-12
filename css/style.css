@@ -1,0 +1,16 @@
+.view{
+	color:#3498db;
+	background: #ecf0f1;
+	border-radius: 20%;
+  }
+.detail{
+	min-width: 400px;
+}
+
+div .regiterForm{
+	width: 70%;
+}
+tbody>tr{
+	background-color: #2c3e50      ;
+
+}

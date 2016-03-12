@@ -1,0 +1,32 @@
+<header-main></header-main>
+<div class="container" ng-controller="SummaryController">
+  <div class="panel  ">
+    <div class="panel-head">
+      <h1>Bienvenido {{name}}!</h1>
+      <h3>Estas son las últimas 10 transacciones en su {{accountsType}}</h3>
+    </div>
+    <div class="view">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th class="detail">Details</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="transfer in transfers">
+            <td> {{transfers.date |date}}</td>
+            <td>{{transfers.description}}</td>
+            <td>{{transfers.amount | currency}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="1">{{newAmount}}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
