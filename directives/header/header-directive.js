@@ -8,7 +8,6 @@ angular
 
 	function headerMain() {
 		function headerMainCtrl(){
-
 		}
 
 		return{

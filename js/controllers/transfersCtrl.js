@@ -1,9 +1,9 @@
-angular.module('bankCR', ['ngRoute'])
+angular.module('bankCR')
 .controller('transfersCtrl', ['$scope', 'transfersServices', '$localStorage', 'getStorage',
-  function ($scope, transfersServices, $localStorage, getLocalStorage) {
+  function ($scope, transfersServices, $localStorage, getStorage) {
     $scope.transfersType = transfersServices.transfersType;
     $scope.date = transfersServices.currentDate;
-    $scope.transfers = getLocalStorage.gettransfers();
+    $scope.transfers = getStorage.getTransfers();
 
   $scope.addTransfers = function() {
       $scope.transfers.push({
@@ -12,7 +12,7 @@ angular.module('bankCR', ['ngRoute'])
         'amount': $scope.newAmount,
         'description': $scope.newDescription
       });
-      getLocalStorage.updatetransfers($scope.transfers);
+      getStorage.updateTransfers($scope.transfers);
       $scope.newDate = '';
       $scope.newAmount = '';
       $scope.newDescription = '';

@@ -1,9 +1,9 @@
 <header-main></header-main>
-<div class="container" ng-controller="transfersCtrl">
+<div class="container">
   <h2>Agregar Transferencia</h2>
   <form ng-submit="addTransfers()">
     <div class="form-group">
-      <label for="movementDate">Date</label>
+      <label for="transfersDate">Fecha</label>
       <input type="date" class="form-control" ng-model="newDate" placeholder="date of transfers">
     </div>
     <div class="form-group ">
@@ -19,6 +19,6 @@
       <label for="transfersDescription">Descripci&oacute;n de la Transferencia</label>
       <textarea class="form-control" rows="3" ng-model="newDescription" id="transfersDescription"></textarea>
     </div>
-    <button type="text" class="btn btn-default">Agregar Transferencia</button>
+    <button type="submit" class="btn btn-default">Agregar Transferencia</button>
   </form>
 </div>

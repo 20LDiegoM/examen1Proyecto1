@@ -5,13 +5,13 @@
   <title>Examen 1</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 </head>
 
 <body ng-controller="mainController as main">
-  <div ng-view>
+  <div ui-view>
     <!--Displays all views-->
   </div>
 
@@ -20,14 +20,14 @@
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/ngstorage/ngStorage.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <script type="text/javascript" src="directives/header/header-directive.js"></script>
-  <script src="js/registerCtrl.js"></script>
-  <script src="js/summaryCtrl.js"></script>
-  <script src="js/transfersCtrl.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="js/main.js"></script>
-
+  <script type="text/javascript" src="directives/header/header-directive.js"></script>
   <script src="services/services.js"></script>
+  <script src="js/controllers/registerCtrl.js"></script>
+  <script src="js/controllers/summaryCtrl.js"></script>
+  <script src="js/controllers/transfersCtrl.js"></script>
+
 
 </body>
 

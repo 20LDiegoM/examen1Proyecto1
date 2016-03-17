@@ -1,7 +1,7 @@
-angular.module('services', [ngRoute])
+angular.module('bankCR')
 .factory('registerService',
   function () {
-    var ownerName = ['Jane Smith'],
+    var names = 'Jane Smith',
         inCurrencyName = 'Jane Smith',
         inAccountsType = 'Cuenta de Ahorros',
         accountType = ['Cuenta en cheques', 'Cuenta de Ahorros'],
@@ -13,7 +13,7 @@ angular.module('services', [ngRoute])
       inCurrency: inCurrency,
       accountType: accountType,
       inAccountsType : inAccountsType,
-      ownerName : ownerName,
+      names : names,
       inCurrencyName : inCurrencyName
     };
   })
@@ -30,7 +30,7 @@ angular.module('services', [ngRoute])
     };
 })
 
-.factory('summaryService', function() {
+.factory('summaryServices', function() {
 
     return {
     };
@@ -42,14 +42,14 @@ angular.module('services', [ngRoute])
     return {
       list: transfersList,
 
-      updatetransfers: function (transfersArr) {
+      updateTransfers: function (transfersArr) {
         if (window.localStorage && transfersArr) {
           localStorage.setItem("transfers", angular.toJson(transfersArr));
         }
         transfersList = transfersArr;
       },
 
-      gettransfers: function () {
+      getTransfers: function () {
         transfersList = angular.fromJson( localStorage.getItem("transfers") );
         return transfersList ? transfersList : [];
       }

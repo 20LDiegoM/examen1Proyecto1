@@ -1,15 +1,16 @@
 <header-main></header-main>
-<div class="container" ng-controller="registerCtrl">
+<div class="container">
   <h2>Ingrese su informaci&oacute;n</h2>
     <form class="regiterForm" ng-submit="addClient()">
       <div class="form-group ">
-        <label for="clientName">Elija un nombre de usuario</label>
-        <select class="form-control input-sm" ng-model="name" id="name" ng-options="uName for uName in name">
+        <label for="clientName">Elija el usuario</label>
+        <select class="form-control input-sm" ng-model="name" id="name">
+          <option value="option">{{names}}</option>
         </select>
       </div>
     <div class="form-group ">
       <label for="accountType">Tipo de Cuenta</label>
-      <select class="form-control input-sm" ng-model="inAccountType" ng-options="item for item in accountType">
+      <select class="form-control input-sm" ng-model="inAccountType" ng-options="item for item in register.accountType">
       </select>
     </div>
     <div class="form-group ">
@@ -17,7 +18,7 @@
       <select class="form-control input-sm" ng-model="inCurrency" ng-options="currency for currency in currencies"></select>
     </div>
     <div class="form-group ">
-      <button type="text" class="btn btn-default btn-sm">Agregar Informaci&oacute;n</button>
+      <button type="submit" class="btn btn-default btn-sm">Agregar Informaci&oacute;n</button>
     </div>
   </form>
 </div>

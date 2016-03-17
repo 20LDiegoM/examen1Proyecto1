@@ -2,10 +2,10 @@
   'use strict';
 
   angular
-    .module('bankCR', ['ngRoute', 'ngStorage', 'services'])
+    .module('bankCR', ['ui.router', 'ngStorage'])
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('mainController', mainController);
-})
+
 
 function config($stateProvider, $urlRouterProvider) {
 
@@ -18,24 +18,19 @@ function config($stateProvider, $urlRouterProvider) {
       controllerAs: 'register'
     })
     .state('transfers', {
-      url: '/',
+      url: '/transfers',
       templateUrl: 'views/transfers.html',
       controller: 'transfersCtrl',
       controllerAs: 'transfers'
     })
     .state('summary', {
-      url: '/',
+      url: '/summary',
       templateUrl: 'views/summary.html',
       controller: 'summaryCtrl',
       controllerAs: 'summary'
-    })
-    .state('details', {
-      url: '/',
-      templateUrl: 'views/details.html',
-      controller: 'detailsCtrl',
-      controllerAs: 'details'
-    })
-  $urlRouterProvider.otherwise('/')
+    });
+
+  $urlRouterProvider.otherwise('/');
 }
 
 function mainController() {

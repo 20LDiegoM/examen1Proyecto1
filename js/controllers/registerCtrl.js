@@ -1,15 +1,15 @@
-angular.module('bankCR', ['ngRoute'])
-.controller('registerCtrl', ['$scope', 'registerService', '$localStorage', 'getStorage',
-  function ($scope, registerService, $localStorage, getLocalStorage) {
-    $scope.name = registerService.ownerName;
+angular.module('bankCR')
+.controller('registerCtrl', ['$scope', 'registerService', '$localStorage', 'getStorage', '$state',
+  function ($scope, registerService, $localStorage, getStorage, $state) {
+    $scope.names = registerService.names;
     $scope.currentName = registerService.inCurrencyName;
     $scope.inCurrency = registerService.inCurrency;
     $scope.currencies = registerService.currency;
-    $scope.accountsType = registerService.accountType;
+    $scope.accountType = registerService.accountType;
     $scope.inAccountType = registerService.inAccountsType;
-    $scope.transfers = getLocalStorage.gettransfers();
+    $scope.transfers = getStorage.getTransfers();
 
   $scope.addClient = function() {
-      $scope.name = angular.element('name').value;
+      $state.go('summary');
     }
-}])
+}]);
